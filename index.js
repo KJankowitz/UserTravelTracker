@@ -45,7 +45,7 @@ async function getCurrentUser() {
   return users.find((user) => user.id == currentUserId);
 }
 
-//get home page, display visited countries 
+//get home page, display visited countries of current user
 app.get("/", async (req, res) => {
   const countries = await checkVisisted();
   const currentUser = await getCurrentUser();
